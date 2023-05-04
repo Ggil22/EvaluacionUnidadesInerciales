@@ -67,5 +67,3 @@ def Run():
                     terminate = True
     # Cerramos el puerto serie.
     arduino.close
-
-Run()

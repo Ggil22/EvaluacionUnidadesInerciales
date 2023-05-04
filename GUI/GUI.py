@@ -54,11 +54,11 @@ def Salir():
 
 def open3D():
     MessageBox.showinfo(message="Cuando se cierre el 3d se cerrará el programa entero.", title="INFO")
-    if datos_imu == "Pololu":
+    if datos_imu == "LSM303DyL3GD20H":
         GUI_minimu.Run()
-    elif datos_imu == "Arduino":
+    elif datos_imu == "LSM6DS3":
         GUI_arduino.Run()
-    elif datos_imu == "Steval":
+    elif datos_imu == "LSM9DS1":
         GUI_steval.Run()
     else:
         MessageBox.showinfo(message="Elige primero una imu que desee representar.", title="INFO")
@@ -245,7 +245,7 @@ def createCombos():
     combo_datos.current(1)
 
     global combo_imu
-    combo_imu = ttk.Combobox(state="readonly",values=["Steval", "Arduino", "Pololu"])
+    combo_imu = ttk.Combobox(state="readonly",values=["LSM9DS1", "LSM6DS3", "LSM303DyL3GD20H"])
     combo_imu.place(x=200, y=190)
     combo_imu.current(1)
 
